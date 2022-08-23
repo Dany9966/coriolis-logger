@@ -158,9 +158,9 @@ func (s *SyslogWorker) Stop() error {
 	if err := s.server.Kill(); err != nil {
 		return errors.Wrap(err, "killing syslog server")
 	}
-	if err := s.cleanStaleSocket(); err != nil {
-		return errors.Wrap(err, "removing socket")
-	}
+	// if err := s.cleanStaleSocket(); err != nil {
+	// 	return errors.Wrap(err, "removing socket")
+	// }
 	return nil
 }
 
